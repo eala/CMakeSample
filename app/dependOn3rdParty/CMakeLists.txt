@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 2.8)
 
-project(testLibApp)
+project(dependOn3rdPartyApp)
 
-set(the_target testLibApp)
+set(the_target dependOn3rdPartyApp)
 
-include(${CMAKE_SOURCE_DIR}/3rdparty/srcLibA.cmake REQUIRED)
+include(${CMAKE_SOURCE_DIR}/3rdparty/lib3rdpartyA.cmake REQUIRED)
 
 set(SRCS
 	main.cpp
@@ -50,7 +50,7 @@ add_executable(${the_target}
 )
 
 # Components will list all the library name for linking instructions, e.g. g++ -lmath -lzip, here we will gen math zip
-add_dependencies(${the_target} ${TESTLIBA_LIB_COMPONENTS})
+add_dependencies(${the_target} ${LIB_3RD_PARTY_A_LIB_COMPONENTS})
 
 # for add_executable
-target_link_libraries(${the_target} ${TESTLIBA_LIBS})
+target_link_libraries(${the_target} ${LIB_3RD_PARTY_A_LIBS})

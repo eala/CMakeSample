@@ -1,15 +1,15 @@
 cmake_minimum_required(VERSION 2.8)
 
-project(testLib)
+project(lib3rdpartyA)
 
-set(the_target testLibA)
+set(the_target lib3rdpartyA)
 
 set(SRCS
-	srcLibA.cpp
+	lib3rdpartyA.cpp
 )
 
 set(HDRS
-	srcLibA.h
+	lib3rdpartyA.h
 )
 
 if(MSVC)
@@ -47,7 +47,7 @@ add_library(${the_target} STATIC ${SRCS} ${HDRS})
 
 set_target_properties(${the_target}
     PROPERTIES
-    OUTPUT_NAME "testLibA"
+    OUTPUT_NAME "lib3rdpartyA"
     DEBUG_POSTFIX "d"
     ARCHIVE_OUTPUT_DIRECTORY ${TESTLIBA_BINARY_DIR}/lib
     RUNTIME_OUTPUT_DIRECTORY ${TESTLIBA_BINARY_DIR}/bin)

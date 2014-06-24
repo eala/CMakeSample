@@ -1,8 +1,8 @@
 #include "libAheader.h"
-#include <stdio.h>
+#include <iostream>
 
 libA::libA(){
-	m_objA = new srcClassA();
+	m_objA = new lib3rdPartyA();
 }
 
 libA::~libA(){
@@ -13,9 +13,9 @@ libA::~libA(){
 
 void libA::demolibA(){
 	if(m_objA){
-		printf("demo libA\n");
+		std::cout << "demo libA\n";
 		m_objA->nonVirtualFunc();
 	}else{
-		printf("objA is null\n");
+		std::cout << "objA is null\n";
 	}
 }

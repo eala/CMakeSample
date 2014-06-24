@@ -1,13 +1,13 @@
 cmake_minimum_required(VERSION 2.8)
 
-project(libApp)
+project(dependOnLibApp)
 
-set(the_target libApp)
+set(the_target dependOnLibApp)
 
 # based only on lib
 include(${CMAKE_SOURCE_DIR}/lib/libA.cmake REQUIRED)
 # it is also needed libA depending include file, is it make sense??
-include(${CMAKE_SOURCE_DIR}/3rdparty/srcLibA.cmake REQUIRED)
+include(${CMAKE_SOURCE_DIR}/3rdparty/lib3rdpartyA.cmake REQUIRED)
 
 get_property(dirs DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY INCLUDE_DIRECTORIES)
 foreach(dir ${dirs})

@@ -5,7 +5,7 @@ project(libA)
 set(the_target libA)
 
 # includes its dependent library, e.g. 3rdparty libraries
-include(${CMAKE_SOURCE_DIR}/3rdparty/srcLibA.cmake REQUIRED)
+include(${CMAKE_SOURCE_DIR}/3rdparty/lib3rdpartyA.cmake REQUIRED)
 
 
 include_directories(${CMAKE_SOURCE_DIR}/lib/libA)
@@ -65,7 +65,7 @@ install(TARGETS ${the_target}
 	ARCHIVE DESTINATION lib COMPONENT main)	
 
 # Components will list all the library name for linking instructions, e.g. g++ -lmath -lzip, here we will gen math zip
-add_dependencies(${the_target} ${TESTLIBA_LIB_COMPONENTS})
+add_dependencies(${the_target} ${LIB_3RD_PARTY_A_LIB_COMPONENTS})
 
 # link libraries, e.g. testlibA.lib
-target_link_libraries(${the_target} ${TESTLIBA_LIBS})
+target_link_libraries(${the_target} ${LIB_3RD_PARTY_A_LIBS})

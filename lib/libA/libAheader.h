@@ -1,4 +1,4 @@
-#include "srcLibA.h"
+#include "lib3rdpartyA.h"
 
 class libA{
 	public:
@@ -6,5 +6,5 @@ class libA{
 		~libA();
 		void demolibA();
 	private:
-		srcClassA *m_objA;
+		lib3rdPartyA *m_objA;
 };

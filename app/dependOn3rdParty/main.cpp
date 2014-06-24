@@ -1,14 +1,11 @@
-#include "srcLibA.h"
+#include "lib3rdpartyA.h"
 #include <iostream>
-#include <stdio.h>
-#include <stdlib.h>
 
 int main(int argc, char *argv[]){
-	printf("main app\n");
+	std::cout << "main app\n";
 
-	srcClassA *objA = new srcClassA();
+	lib3rdPartyA *objA = new lib3rdPartyA();
 	objA->nonVirtualFunc();
 
-	system("pause");
 	return 0;
 }
